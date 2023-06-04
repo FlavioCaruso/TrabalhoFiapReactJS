@@ -1,18 +1,26 @@
+"use client";
+
 import React from "react";
 import styles from "./page.module.css";
+import { Container, Row } from "react-bootstrap";
+import { Cards } from "../components/cards";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.content}>
+      <Container className={styles.content}>
         <div className={styles.contentHeader}>
           <img src="../img/fiap.png" width="160px"></img>
           <h3>Trabalho de ReactJS</h3>
         </div>
         <div className={styles.contentBody}>
-          <div className={styles.contentCard}></div>
+          <Container className="px-4 py-4">
+            <Row>
+              <Cards />
+            </Row>
+          </Container>
         </div>
-      </div>
+      </Container>
     </main>
   );
 }
