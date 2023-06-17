@@ -16,20 +16,20 @@ const integrants = [
   {
     id: 2,
     name: "Marcelo Mussi",
-    image: "https://via.placeholder.com/400",
+    image: "../img/integrants/Marcelo.jpeg",
     rm: "346153",
     summary:
-      "Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum, ",
+      "Desenvolvedor a 15 anos, atua com projetos web e mobile usando tecnologias ReactJs, Php e Flutter",
     linkedin: "https://www.linkedin.com/in/marcelo-mussi/",
     github: "https://github.com/prodevcom",
   },
   {
     id: 2,
     name: "Marinaldo Silva",
-    image: "https://via.placeholder.com/400",
+    image: "../img/integrants/marinaldo.jpeg",
     rm: "345397",
     summary:
-      "Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum, ",
+      "Marinaldo Ferreira, 27 anos. Atualmente trabalha como Analista de Suporte, tem formação em Ciência da Computação pela Universidade UNIP e cursa MBA em Mobile Development na FIAP.",
     linkedin: "https://www.linkedin.com/in/marinaldof/",
     github: "https://github.com/MarinaldoF",
   },
@@ -39,7 +39,7 @@ const integrants = [
     image: "../img/integrants/tiago.jpeg",
     rm: "345263",
     summary:
-      "Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum, Lorem Ipsum,Lorem Ipsum, ",
+      "Especialista em Qualidade de Software a 18 anos, atuando em diversas frentes de projetos e tecnologias",
     linkedin: "https://www.linkedin.com/in/tiagovaz/",
     github: "https://github.com/tiago-vaz",
   },
@@ -47,12 +47,19 @@ const integrants = [
 
 export function Cards() {
   const cards = integrants.map((integrant) => (
-    <div className="col-md-3">
+    <div className="col-lg-3 mt-3">
       <Card className="card">
         <img src={integrant.image} class="card-img-top" width="100%" />
-        <div class="card-body px-2 ">
-          <h5 class="card-title">{integrant.name}</h5>
-          <h6 class="card-title">RM: {integrant.rm}</h6>
+        <div
+          class="card-body px-2"
+          style={{
+            minHeight: "260px",
+          }}
+        >
+          <div>
+            <h5 class="card-title">{integrant.name}</h5>
+            <h6 class="card-title">RM: {integrant.rm}</h6>
+          </div>
           <p class="card-text">{integrant.summary}</p>
         </div>
         <div
